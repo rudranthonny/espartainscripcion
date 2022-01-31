@@ -91,6 +91,7 @@ class RegistrarEntrevistas extends Component
             $postulante->lugar = $this->e_lugar;
             $postulante->domicilio = $this->e_domicilio;
             $postulante->distrito = $this->e_distrito;
+            $postulante->adoptado = $this->e_adoptado;
             $postulante->fecharegistro = date("Y-m-d");
             $postulante->save();
             /*registrar datos del padre*/ 
