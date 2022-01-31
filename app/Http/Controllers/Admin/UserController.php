@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\User_info_category;
 use App\Models\User_info_field;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade as PDF;
+use Barryvdh\DomPDF\PDF as DomPDFPDF;
 
 class UserController extends Controller
 {
@@ -142,5 +144,12 @@ class UserController extends Controller
     {
         $user->delete();
         return redirect()->route('admin.users.index')->with('info','El usuario se elimino con exito');
+    }
+
+    public function generar_ficha_pdf($estudiante_id)
+    {   
+        $estudiante = User::find($estudiante_id);
+        $pdf = PDF::loadView('admin.users.inscripcionpdf',compact('estudiante'));
+        return $pdf->download('estudiante.pdf');
     }
 }

@@ -16,3 +16,5 @@ Route::get('fields/{field}/{signo}/mover',[FieldController::class,'mover'])->nam
 Route::get('fields/{tcampo}/{categoria}/create2',[FieldController::class,'create2'])->name('admin.fields.create2');
 /*end*/ 
 Route::resource('users', UserController::class)->names('admin.users');
+/*---------------------*/
+Route::get('users/{id}/generarficha',[UserController::class,'generar_ficha_pdf'])->name('admin.users.generarficha');

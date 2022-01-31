@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1 class="text-center">Bienvenido a Centro de Aprendizaje Jadem Learning</h1><hr>
+    <h1 class="text-center">FICHA DE INSCRIPCIÓN DE LA CORPORACIÓN EDUCATIVA ESPARTA</h1><hr>
     <p class="text-center"><img src="img/imagenfondo.jpg" alt="" width="640" height="320"></p>
     
 @stop
