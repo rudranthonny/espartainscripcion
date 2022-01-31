@@ -149,7 +149,9 @@ class UserController extends Controller
     public function generar_ficha_pdf($estudiante_id)
     {   
         $estudiante = User::find($estudiante_id);
-        $pdf = PDF::loadView('admin.users.inscripcionpdf',compact('estudiante'));
-        return $pdf->download('estudiante.pdf');
+        $categories = User_info_category::all();
+        $pdf = PDF::loadView('admin.users.inscripcionpdf',compact('estudiante','categories'));
+        return $pdf->stream();
+        //return $pdf->download('estudiante.pdf');
     }
 }

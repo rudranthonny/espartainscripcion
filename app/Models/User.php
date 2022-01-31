@@ -71,4 +71,7 @@ class User extends Authenticatable
     public function campos(){
         return $this->belongsToMany(User_info_field::class,'field_user','user_id','field_id')->withPivot('data');
     }
+    public function padres(){
+        return $this->hasMany(Padre::class);
+    }
 }
