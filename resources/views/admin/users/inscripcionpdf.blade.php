@@ -9,7 +9,9 @@
     </style>
 </head>
 <body>
-    <center><h1></h1>FICHA DE INSCRIPCIÓN DE LA CORPORACIÓN EDUCATIVA ESPARTA</h1></center><hr><br>
+    <center><h1></h1>FICHA DE INSCRIPCIÓN DE LA CORPORACIÓN EDUCATIVA ESPARTA</h1><br>
+    <img src="{{asset('img/insignia.png')}}" width="50px" height="50px"/></center>
+    <hr><br>
     <center><h2>{{$estudiante->name." ".$estudiante->lastname}}</h2></center>
     <h3>Datos del Estudiante</h3><hr><br>
     <table width="100%" style="text-align: center;border-collapse: collapse;" border="1">
