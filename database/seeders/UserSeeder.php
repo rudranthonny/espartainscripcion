@@ -14,13 +14,13 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $usuarioadmin = new User();
-        $usuarioadmin->name = 'Carlos';
+        $usuarioadmin = User::find(1);
+        /*$usuarioadmin->name = 'Carlos';
         $usuarioadmin->lastname = 'Barreda Esparta';
         $usuarioadmin->dni = '78945645';
         $usuarioadmin->email = '70514757@corporacionesparta.edu.pe';
         $usuarioadmin->password = bcrypt('Esparta2022');
-        $usuarioadmin->save();
+        $usuarioadmin->save();*/
         $usuarioadmin->assignRole('Administrador');
     }
 }
