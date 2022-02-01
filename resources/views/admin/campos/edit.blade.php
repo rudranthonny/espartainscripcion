@@ -41,7 +41,7 @@
      <!--es este campo necesario-->
      <div class="form-group">
         {!! Form::label('require', 'Es este Campo Necesario') !!}
-        {!!Form::select('require', ['1' => 'si', '0' => 'no'],'0',['class' =>'form-control']);!!}
+        {!!Form::select('require', ['1' => 'si', '0' => 'no'],null,['class' =>'form-control']);!!}
         @error('require')
             <span class="text-danger">{{$message}}</span>
         @enderror
@@ -49,7 +49,7 @@
     <!--es este campo bloqueado-->
     <div class="form-group">
         {!! Form::label('locked', 'Esta este campo bloqueado') !!}
-        {!!Form::select('locked', ['1' => 'si', '0' => 'no'],'0',['class' =>'form-control']);!!}
+        {!!Form::select('locked', ['1' => 'si', '0' => 'no'],null,['class' =>'form-control']);!!}
         @error('locked')
             <span class="text-danger">{{$message}}</span>
         @enderror
@@ -57,7 +57,7 @@
       <!--debe ser unico los datos-->
     <div class="form-group">
         {!! Form::label('forceunique', 'Deberia ser unico los datos') !!}
-        {!!Form::select('forceunique', ['1' => 'si', '0' => 'no'],'0',['class' =>'form-control']);!!}
+        {!!Form::select('forceunique', ['1' => 'si', '0' => 'no'],null,['class' =>'form-control']);!!}
         @error('forceunique')
             <span class="text-danger">{{$message}}</span>
         @enderror
@@ -65,7 +65,7 @@
      <!--¿Mostrar en la Pagina para inscribirse?-->
      <div class="form-group">
         {!! Form::label('signup', '¿Mostrar en la Pagina para inscribirse?') !!}
-        {!!Form::select('signup', ['1' => 'si', '0' => 'no'],'0',['class' =>'form-control']);!!}
+        {!!Form::select('signup', ['1' => 'si', '0' => 'no'],null,['class' =>'form-control']);!!}
         @error('signup')
             <span class="text-danger">{{$message}}</span>
         @enderror
@@ -73,7 +73,7 @@
      <!--¿Quién puede ver este Campo?-->
      <div class="form-group">
         {!! Form::label('visible', '¿Quién puede ver este Campo?') !!}
-        {!!Form::select('visible', ['1' => 'Visible por el usuario', '0' => 'No visible', '3' => 'Visible para los usuarios, profesores y administradores', '2' => 'Todos pueden verlo'],'2',['class' =>'form-control']);!!}
+        {!!Form::select('visible', ['1' => 'Visible por el usuario', '0' => 'No visible', '3' => 'Visible para los usuarios, profesores y administradores', '2' => 'Todos pueden verlo'],null,['class' =>'form-control']);!!}
         @error('visible')
             <span class="text-danger">{{$message}}</span>
         @enderror
@@ -92,7 +92,7 @@
         <!--valor por defecto-->
         <div class="form-group">
             {!! Form::label('defaultdata', 'Marcado por defecto') !!}
-            {!!Form::select('defaultdata', ['1' => 'si', '0' => 'no'],'0',['class' =>'form-control']);!!}
+            {!!Form::select('defaultdata', ['1' => 'si', '0' => 'no'],null,['class' =>'form-control']);!!}
             @error('defaultdata')
                 <span class="text-danger">{{$message}}</span>
             @enderror

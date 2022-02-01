@@ -265,7 +265,7 @@
             @if($formulario == true)
             <div style="color: red">{{$mensaje}}</div>
             @else
-            <button wire:click="mostrarformulario()">
+            <button wire:loading.attr="disabled" wire:target="mostrarformulario()" wire:click="mostrarformulario()">
                 Felicidades, su inscripción fue un exito
             </button>
             @endif
