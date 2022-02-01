@@ -141,9 +141,16 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)
-    {
+    {   if($user->id != 1)
+        {
         $user->delete();
-        return redirect()->route('admin.users.index')->with('info','El usuario se elimino con exito');
+        $mensaje = "El usuario se elimino con exito";
+        }
+        else
+        {
+        $mensaje = "El usuario no se puede eliminar";
+        }
+        return redirect()->route('admin.users.index')->with('info',$mensaje);
     }
 
     public function generar_ficha_pdf($estudiante_id)

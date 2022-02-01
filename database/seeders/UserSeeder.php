@@ -21,5 +21,6 @@ class UserSeeder extends Seeder
         $usuarioadmin->email = '70514757@corporacionesparta.edu.pe';
         $usuarioadmin->password = bcrypt('Esparta2022');
         $usuarioadmin->save();
+        $usuarioadmin->assignRole('Administrador');
     }
 }

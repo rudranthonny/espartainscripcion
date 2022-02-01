@@ -30,7 +30,7 @@ return [
     |
     */
 
-    'use_ico_only' => false,
+    'use_ico_only' => true,
     'use_full_favicon' => false,
 
     /*
@@ -250,27 +250,33 @@ return [
             'text'        => 'Dashbord',
             'route'         => 'admin.home',
             'icon'        => 'fas fa-tachometer-alt fa-fw',
+            'can' => 'admin.administrador.index'
         ],
-        ['header' => 'Administrador'],
+        ['header' => 'Administrador',
+        'can' => 'admin.administrador.index'],
         [
             'text' => 'Usuarios',
             'route'  => 'admin.users.index',
             'icon' => 'fas fa-fw fa-user',
+            'can' => 'admin.administrador.index'
         ],
         [
             'text' => 'Categorias',
             'route'  => 'admin.categories.index',
             'icon' => 'fab fa-fw fa-buffer',
+            'can' => 'admin.administrador.index'
         ],
         [
             'text' => 'Subir Usuarios',
             'url'  => '#',
             'icon' => 'fas fa-file-upload',
+            'can' => 'admin.administrador.index'
         ],
         [
             'text' => 'Exportar Usuarios',
             'url'  => '#',
             'icon' => 'fas fa-download',
+            'can' => 'admin.administrador.index'
         ],
     ],
 

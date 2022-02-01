@@ -29,7 +29,7 @@
                             <td>{{$user->name}}</td>
                             <td>{{$user->email}}</td>
                             <td><a href="{{route('admin.users.edit',$user)}}" class="btn btn-primary btn-sm">Editar</a></td>
-                            <td><a href="{{route('admin.users.generarficha',$user->id)}}" class="btn btn-success btn-sm"><i class="fas fa-file-pdf"></i> Generar PDF</a></td>
+                            <td><a href="{{route('admin.users.generarficha',$user->id)}}" target="_blank" class="btn btn-success btn-sm"><i class="fas fa-file-pdf"></i> Generar PDF</a></td>
 
                             <td>
                                 <form action="{{route('admin.users.destroy',$user)}}" method="POST">
